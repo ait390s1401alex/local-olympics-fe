@@ -1,5 +1,6 @@
 import React from 'react';
 
+// get google app id from app settings configuration file
 var app_settings = require("json!./../../../config/app_settings.json");
 
 var sign2Loaded = false;
