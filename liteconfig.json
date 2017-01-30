@@ -1,0 +1,11 @@
+{
+  "port": 8080,
+  "reloadDebounce": 250,
+  "files": ["./build/**/*.{html,css,js}"],
+  "server": {
+    "baseDir": "./build",
+    "index": "index.html"
+  },
+  "open": false,
+  "host": "192.168.1.101"
+}
