@@ -9,8 +9,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('del', ["clean"]);
   grunt.registerTask('cop', ["copy"]);
-  grunt.registerTask('build', ['browserify']);
-  grunt.registerTask('babeltask', ['babel']);
+  grunt.registerTask('build', ['del', 'copy','browserify']);
+  grunt.registerTask('quick', ['browserify']);
   // Default task(s).
   grunt.registerTask('default', ['copy', 'browserify']);
 

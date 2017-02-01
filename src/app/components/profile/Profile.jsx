@@ -7,7 +7,7 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loggedInUser: false
+      loggedInUser: {}
     };
 
   }
@@ -15,13 +15,13 @@ class Profile extends React.Component {
   componentDidMount() {
     var _this = this;
 
-    var user;
+    var user = {};
     if(localStorage.gtoken){
       user = Auth.validateToken(localStorage.gtoken);
       console.log(user);
     }
     _this.setState({loggedInUser: user});
-    if(user.sub){
+    if(user && user.sub){
       loapi.getprofile(user.sub).then(function(data) {
         _this.setState({profile: data});
       });

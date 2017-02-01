@@ -32,8 +32,8 @@ class Signin extends React.Component{
   render () {
     var loggedInUserThumb = "";
 
-    if (this.props.loggedInUser && this.props.loggedInUser.thumb) {
-      loggedInUserThumb = <img src={this.props.loggedInUser.thumb} />
+    if (this.props.loggedInUser && this.props.loggedInUser.picture) {
+      loggedInUserThumb = <img src={this.props.loggedInUser.picture} />
     }
 
     var toggleLoginButton = <button className="btn btn-default navbar-btn"  onClick={this.toggleSignIn}>Login with Google</button>

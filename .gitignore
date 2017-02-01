@@ -2,4 +2,4 @@
 /build/*
 /node_modules/*
 /credentials/*
-/src/config/app_settings.json
+/src/config/*

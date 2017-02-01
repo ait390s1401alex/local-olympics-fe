@@ -41,16 +41,16 @@ module.exports = {
   getAuth2() {
     return auth2;
   },
-  signIn() {
 
+  signIn() {
     this.getAuth2().signIn().then(function (success) {
+      window.location.reload();
     }, function (fail) {
     });
   },
-  signOut() {
 
+  signOut() {
     this.getAuth2().signOut().then(function (success) {
-      //this.transitionTo("/");
       window.location.reload();
     }, function (fail) {
     });

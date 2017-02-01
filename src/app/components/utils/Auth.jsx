@@ -12,13 +12,8 @@ module.exports = {
       googleApiLoader.getAuth2().currentUser.listen(function (user) {
         var profileProxy = {};
         if (user.getBasicProfile()) {
-          var profile = user.getBasicProfile();
-          profileProxy.id = profile.getId();
-          profileProxy.name = profile.getName();
-          profileProxy.thumb = profile.getImageUrl();
-          profileProxy.email = profile.getEmail();
-          profileProxy.token = user.getAuthResponse().id_token;
-          localStorage.gtoken = profileProxy.token;
+          localStorage.gtoken = user.getAuthResponse().id_token;
+          profileProxy = module.exports.validateToken(localStorage.gtoken);
         }
         if(user.getBasicProfile()){
           profileProxy.isLoggedIn = true;
