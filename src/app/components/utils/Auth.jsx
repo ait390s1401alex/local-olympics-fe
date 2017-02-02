@@ -15,7 +15,7 @@ module.exports = {
           localStorage.gtoken = user.getAuthResponse().id_token;
           profileProxy = module.exports.validateToken(localStorage.gtoken);
         }
-        if(user.getBasicProfile()){
+        if(user.getBasicProfile() && profileProxy.sub){
           profileProxy.isLoggedIn = true;
         }else{
           profileProxy.isLoggedIn = false;
@@ -28,7 +28,11 @@ module.exports = {
   validateToken(token) {
     //TODO - validate token on backend
     var decoded = jwt.decode(token);
-    return decoded;
+    if(decoded){
+      return decoded;
+    }else{
+      return {};
+    }
   },
 
   isAuthenticated(){

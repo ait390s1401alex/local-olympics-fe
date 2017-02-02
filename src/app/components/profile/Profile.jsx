@@ -22,7 +22,6 @@ class Profile extends React.Component {
     _this.setState({loggedInUser: user});
     if(user && user.sub){
       loapi.getprofile(user.sub).then(function(data) {
-        console.log(data);
         if(data){
           _this.setState({profile: data});
         }else{

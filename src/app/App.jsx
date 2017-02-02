@@ -13,12 +13,14 @@ class App extends React.Component {
       loggedInUser: {}
     };
 
-  } 
+  }
 
   componentDidMount() {
     var _this = this;
 
     Auth.getUser(function(data){
+      console.log("getuser called");
+      console.log(data);
       _this.setState({loggedInUser: data});
     });
 
