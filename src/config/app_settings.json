@@ -1,3 +1,4 @@
 {
-  "client_id": "YOUR GOOGLE APP IS HERE"
+  "client_id": "YOUR GOOGLE APPENGINE APP ID HERE",
+  "baseURL": "http://localhost:8080"
 }

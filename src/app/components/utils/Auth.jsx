@@ -26,12 +26,13 @@ module.exports = {
   },
 
   validateToken(token) {
+    //TODO - validate token on backend
     var decoded = jwt.decode(token);
     return decoded;
   },
 
   isAuthenticated(){
-
+    //TODO
   }
 
 }

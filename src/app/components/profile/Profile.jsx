@@ -7,7 +7,7 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loggedInUser: {}
+      profile: {}
     };
 
   }
@@ -18,12 +18,16 @@ class Profile extends React.Component {
     var user = {};
     if(localStorage.gtoken){
       user = Auth.validateToken(localStorage.gtoken);
-      console.log(user);
     }
     _this.setState({loggedInUser: user});
     if(user && user.sub){
       loapi.getprofile(user.sub).then(function(data) {
-        _this.setState({profile: data});
+        console.log(data);
+        if(data){
+          _this.setState({profile: data});
+        }else{
+          _this.setState({profile: {}});
+        }
       });
     }
 
@@ -38,7 +42,7 @@ class Profile extends React.Component {
         <div>
           <div className="panel panel-danger">
             <div className="panel-heading">
-              <h3 className="panel-title">404</h3>
+              <h3 className="panel-title">Under Construction</h3>
             </div>
             <div className="panel-body">
               Under Contstruction
