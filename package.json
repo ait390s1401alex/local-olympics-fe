@@ -5,7 +5,7 @@
     "start": "lite-server -c liteconfig.json",
     "copy": "cp src/index.html dist/ && cp node_modules/bootstrap/dist/*/bootstrap.min.* dist/ && cp node_modules/jquery/dist/jquery.min.js dist/",
     "clean": "rm -rf dist && mkdir dist",
-    "build": "npm run copy && npm run build:js",
+    "build": "npm run clean && npm run copy && npm run build:js",
     "build:js": "browserify -t [babelify --presets es2015 --presets react] -p [css-modulesify -o build/main.css] -o build/app.js src/index.jsx"
   },
   "devDependencies": {
