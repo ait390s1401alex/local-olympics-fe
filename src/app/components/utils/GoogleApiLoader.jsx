@@ -51,7 +51,7 @@ module.exports = {
 
   signOut() {
     this.getAuth2().signOut().then(function (success) {
-      //window.location.replace(app_settings.baseURL);
+      window.location.replace(app_settings.baseURL);
     }, function (fail) {
     });
   }

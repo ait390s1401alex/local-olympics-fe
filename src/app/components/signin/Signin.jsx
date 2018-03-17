@@ -33,7 +33,7 @@ class Signin extends React.Component{
     var loggedInUserThumb = "";
 
     if (this.props.loggedInUser && this.props.loggedInUser.picture) {
-      loggedInUserThumb = <img src={this.props.loggedInUser.picture} />
+      loggedInUserThumb = <img src={this.props.loggedInUser.picture} height="50" width="50"/>
     }
 
     var toggleLoginButton = <button className="btn btn-default navbar-btn"  onClick={this.toggleSignIn}>Login with Google</button>

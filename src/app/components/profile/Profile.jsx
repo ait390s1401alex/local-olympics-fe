@@ -2,6 +2,7 @@ import React from 'react';
 
 import Auth from '../utils/Auth.jsx';
 import loapi from '../utils/loapi.jsx';
+import SigninPage from '../signin/SigninPage.jsx'
 
 class Profile extends React.Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class Profile extends React.Component {
   render() {
     var content;
 
-    if(this.state && this.state.loggedInUser){
+    if(this.state && this.state.loggedInUser && this.state.loggedInUser.isLoggedIn){
       content = (
         <div>
           <div className="panel panel-danger">
@@ -50,7 +51,7 @@ class Profile extends React.Component {
         </div>
       );
     }else{
-      content = (<div>test</div>);
+      content = (<SigninPage />);
     }
 
     return(
