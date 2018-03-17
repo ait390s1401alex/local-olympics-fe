@@ -7,7 +7,6 @@ import NotFound from './app/components/notFound/NotFound.jsx';
 import Dashboard from './app/components/dashboard/Dashboard.jsx';
 import Profile from './app/components/profile/Profile.jsx';
 
-
 render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>

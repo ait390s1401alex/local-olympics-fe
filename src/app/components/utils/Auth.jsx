@@ -35,8 +35,4 @@ module.exports = {
     }
   },
 
-  isAuthenticated(){
-    //TODO
-  }
-
 }
