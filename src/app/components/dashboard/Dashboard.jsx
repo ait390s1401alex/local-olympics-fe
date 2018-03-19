@@ -5,7 +5,7 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-      <div className="well">
+      <div className="card">
         <div className={DisplayStyle.dstyle}>
           <p>MAIN DISPLAY -- placeholder content</p>
         </div>

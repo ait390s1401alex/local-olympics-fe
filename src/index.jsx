@@ -15,5 +15,5 @@ render(
       <Route path="*" component={NotFound}></Route>
     </Route>
   </Router>,
-  document.querySelector("#app")
+  document.getElementById("app")
 );

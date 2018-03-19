@@ -33,18 +33,20 @@ class Signin extends React.Component{
     var loggedInUserThumb = "";
 
     if (this.props.loggedInUser && this.props.loggedInUser.picture) {
-      loggedInUserThumb = <img src={this.props.loggedInUser.picture} height="50" width="50"/>
+      loggedInUserThumb = <img src={this.props.loggedInUser.picture} height="50" width="50" className="p-1 rounded-circle"/>
     }
 
-    var toggleLoginButton = <button className="btn btn-default navbar-btn"  onClick={this.toggleSignIn}>Login with Google</button>
-    var toggleLogoutButton = <button className="btn btn-default navbar-btn" onClick={this.toggleSignOut}>Sign Out</button>
+    var toggleLoginButton = <button className="btn btn-primary"  onClick={this.toggleSignIn}>Login with Google</button>
+    var toggleLogoutButton = <button className="btn btn-primary" onClick={this.toggleSignOut}>Sign Out</button>
 
     if (this.props.loggedInUser && this.props.loggedInUser.isLoggedIn) {
 
-      return <div>
-        {loggedInUserThumb}
-        {toggleLogoutButton}
-      </div>
+      return (
+        <div>
+            {loggedInUserThumb}
+            {toggleLogoutButton}
+        </div>
+      )
     }
     else {
       return toggleLoginButton;

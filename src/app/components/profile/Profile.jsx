@@ -40,11 +40,11 @@ class Profile extends React.Component {
     if(this.state && this.state.loggedInUser && this.state.loggedInUser.isLoggedIn){
       content = (
         <div>
-          <div className="panel panel-danger">
-            <div className="panel-heading">
-              <h3 className="panel-title">Under Construction</h3>
+          <div className="card bg-light">
+            <div className="card-header">
+              <h3 className="card-title">Under Construction</h3>
             </div>
-            <div className="panel-body">
+            <div className="card-body">
               Under Contstruction
             </div>
           </div>
