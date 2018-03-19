@@ -29,14 +29,11 @@ module.exports = {
     //TODO - validate token on backend
     var decoded = jwt.decode(token);
     if(decoded){
+      decoded.isLoggedIn = true;
       return decoded;
     }else{
       return {};
     }
   },
-
-  isAuthenticated(){
-    //TODO
-  }
 
 }

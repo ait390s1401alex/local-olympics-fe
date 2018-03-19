@@ -2,6 +2,7 @@ import React from 'react';
 
 import Auth from '../utils/Auth.jsx';
 import loapi from '../utils/loapi.jsx';
+import SigninPage from '../signin/SigninPage.jsx'
 
 class Profile extends React.Component {
   constructor(props) {
@@ -36,21 +37,21 @@ class Profile extends React.Component {
   render() {
     var content;
 
-    if(this.state && this.state.loggedInUser){
+    if(this.state && this.state.loggedInUser && this.state.loggedInUser.isLoggedIn){
       content = (
         <div>
-          <div className="panel panel-danger">
-            <div className="panel-heading">
-              <h3 className="panel-title">Under Construction</h3>
+          <div className="card bg-light">
+            <div className="card-header">
+              <h3 className="card-title">Under Construction</h3>
             </div>
-            <div className="panel-body">
+            <div className="card-body">
               Under Contstruction
             </div>
           </div>
         </div>
       );
     }else{
-      content = (<div>test</div>);
+      content = (<SigninPage />);
     }
 
     return(
