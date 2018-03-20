@@ -39,13 +39,50 @@ class Profile extends React.Component {
 
     if(this.state && this.state.loggedInUser && this.state.loggedInUser.isLoggedIn){
       content = (
-        <div>
-          <div className="card bg-light">
-            <div className="card-header">
-              <h3 className="card-title">Under Construction</h3>
+        <div className="container-fluid my-2">
+          <div className="row">
+            <div className="col-md bg-white">
+              <div className="card my-2">
+                <div className="card-header">
+                    <h3 className="card-title">{this.state.loggedInUser.name}</h3>
+                </div>
+                <div className="card-body">
+                  <div className="row my-1">
+                    <div className="col-sm font-weight-bold">
+                      Firstname
+                    </div>
+                    <div className="col-sm-9">
+                      {this.state.loggedInUser.given_name}
+                    </div>
+                  </div>
+                  <div className="row my-1">
+                    <div className="col-sm font-weight-bold">
+                      Lastname
+                    </div>
+                    <div className="col-sm-9">
+                      {this.state.loggedInUser.family_name}
+                    </div>
+                  </div>
+                  <div className="row my-1">
+                    <div className="col-sm font-weight-bold">
+                      Email
+                    </div>
+                    <div className="col-sm-9">
+                      {this.state.loggedInUser.email}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="card-body">
-              Under Contstruction
+            <div className="col-md bg-white">
+              <div className="card my-2">
+                <div className="card-header">
+                  <h3 className="card-title">Map</h3>
+                </div>
+                <div className="card-body text-center">
+                  <img src={this.state.loggedInUser.picture} width="300" height="300"/>
+                </div>
+              </div>
             </div>
           </div>
         </div>

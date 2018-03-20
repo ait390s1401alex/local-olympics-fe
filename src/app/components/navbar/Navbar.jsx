@@ -15,7 +15,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light my-2">
           <IndexLink to="/" className="navbar-brand">Local Olympics</IndexLink>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMainNavbar" aria-controls="navbarMainNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -26,7 +26,7 @@ class Navbar extends React.Component {
                 <Link className="nav-link" to="/profile">Profile</Link>
               </li>
             </ul>
-            <div className="mr-2 ml-auto">
+            <div className="mr-1 ml-auto">
               <Signin
                 loggedInUser = {this.props.loggedInUser}
               />
