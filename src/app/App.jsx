@@ -19,8 +19,6 @@ class App extends React.Component {
     var _this = this;
 
     Auth.getUser(function(data){
-      console.log("getuser called");
-      console.log(data);
       _this.setState({loggedInUser: data});
     });
 
