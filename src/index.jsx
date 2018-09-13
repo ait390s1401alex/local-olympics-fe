@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
+import registerServiceWorker from './registerServiceWorker';
 import App from './app/App.jsx';
 import NotFound from './app/components/notFound/NotFound.jsx';
 import Dashboard from './app/components/dashboard/Dashboard.jsx';
@@ -19,3 +20,4 @@ render(
   </Router>,
   document.getElementById("app")
 );
+registerServiceWorker();

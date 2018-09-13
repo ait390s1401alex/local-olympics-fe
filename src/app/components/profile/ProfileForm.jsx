@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'react-router';
 
 import UpdateButton from '../common/UpdateButton.jsx';
 
@@ -16,6 +17,10 @@ class ProfileForm extends React.Component {
 
   }
 
+  submitForm(event){
+    window.location.replace("/profile");
+  }
+
   render() {
 
     var content = <div>Loading...</div>;
@@ -24,7 +29,7 @@ class ProfileForm extends React.Component {
 
       content = (
         <div>
-          <form name="form_update">
+          <form name="form_update" onSubmit={this.submitForm}>
             <div className="card my-2">
               <div className="card-header">
                   <h3 className="card-title">{this.props.data.Alias}</h3>
@@ -132,7 +137,7 @@ class ProfileForm extends React.Component {
                 </div>
               </div>
             </div>
-            <button className="btn btn-primary" onClick={this.submitForm}>Save</button>
+            <input type="submit" className="btn btn-primary" value="Save"/>
           </form>
         </div>
       );
