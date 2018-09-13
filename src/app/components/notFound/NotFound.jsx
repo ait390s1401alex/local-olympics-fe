@@ -5,11 +5,11 @@ class NotFound extends React.Component {
   render() {
     return (
       <div>
-        <div className="panel panel-danger">
-          <div className="panel-heading">
-            <h3 className="panel-title">404</h3>
+        <div className="card bg-warning">
+          <div className="card-header">
+            <h3 className="card-title">404</h3>
           </div>
-          <div className="panel-body">
+          <div className="card-body">
             Page Not Found
           </div>
         </div>

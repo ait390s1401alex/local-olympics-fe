@@ -15,23 +15,22 @@ class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-default">
-          <div className="container-fluid">
-            <div className="navbar-header">
-              <IndexLink to="/" className="navbar-brand">Home</IndexLink>
-            </div>
-            <ul className="nav navbar-nav">
-              <li><Link to="/profile">Profile</Link></li>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light my-2">
+          <IndexLink to="/" className="navbar-brand">Local Olympics</IndexLink>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMainNavbar" aria-controls="navbarMainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarMainNavbar">
+            <ul className="navbar-nav">
+              <li className="nav-item active">
+                <Link className="nav-link" to="/profile">Profile</Link>
+              </li>
             </ul>
-            <div className="collapse navbar-collapse">
-              <div className="nav navbar-nav navbar-right">
-                <div>
-                  <Signin
-                    loggedInUser = {this.props.loggedInUser}
-                  />
-                </div>
-              </div>
-            </div>
+            <div className="mr-1 ml-auto">
+              <Signin
+                loggedInUser = {this.props.loggedInUser}
+              />
+          </div>
           </div>
         </nav>
       </div>

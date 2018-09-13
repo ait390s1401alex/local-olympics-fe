@@ -19,8 +19,6 @@ class App extends React.Component {
     var _this = this;
 
     Auth.getUser(function(data){
-      console.log("getuser called");
-      console.log(data);
       _this.setState({loggedInUser: data});
     });
 
@@ -31,11 +29,13 @@ class App extends React.Component {
   render() {
     console.log(this);
     return (
-      <div className="container">
+      <div className="container-fluid my-2">
         <Navbar
           loggedInUser={this.state.loggedInUser}
         />
-      {this.props.children}
+      <div className="my-4">
+        {this.props.children}
+      </div>
       </div>
     )
   }

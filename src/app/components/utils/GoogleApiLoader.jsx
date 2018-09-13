@@ -44,14 +44,14 @@ module.exports = {
 
   signIn() {
     this.getAuth2().signIn().then(function (success) {
-      //window.location.replace(app_settings.baseURL);
+      window.location.reload();
     }, function (fail) {
     });
   },
 
   signOut() {
     this.getAuth2().signOut().then(function (success) {
-      //window.location.replace(app_settings.baseURL);
+      window.location.replace(app_settings.baseURL);
     }, function (fail) {
     });
   }
