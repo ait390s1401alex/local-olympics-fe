@@ -11,12 +11,25 @@ var axiosConfig = {
 
 module.exports = {
 
-  getprofile(uid) {
-    var url = '/rest/participant/' + uid;
-    //var url = '/rest/participant/all'
-    return axios.get(url, axiosConfig)
+  getprofile(email) {
+    var url = 'http://20.localolympics.appspot.com/rest/participant/email/' + email;
+    var instance = axios.create(axiosConfig);
+    return instance.get(url)
     .then(function (response) {
-      console.log(response);
+      return response;
+    })
+    .catch(function (error) {
+      console.log("error: " + error);
+      return;
+    });
+
+  },
+
+  getEntityData(entityKind, entityId) {
+    var url = 'http://20.localolympics.appspot.com/rest/' + entityKind + '/' + entityId;
+    var instance = axios.create(axiosConfig);
+    return instance.get(url)
+    .then(function (response) {
       return response;
     })
     .catch(function (error) {

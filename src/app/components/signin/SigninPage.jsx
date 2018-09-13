@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Signin from './Signin.jsx';
+
 class SigninPage extends React.Component {
   constructor(props) {
     super(props);
@@ -14,12 +16,12 @@ class SigninPage extends React.Component {
 
       content = (
         <div>
-          <div className="panel">
-            <div className="panel-heading">
-              <h3 className="panel-title">Sign in</h3>
+          <div className="card">
+            <div className="card-header">
+              <h3 className="card-title">Sign in</h3>
             </div>
-            <div className="panel-body">
-              Please sign in to view your profile
+            <div className="card-body">
+              Please <Signin/> to view your profile
             </div>
           </div>
         </div>
