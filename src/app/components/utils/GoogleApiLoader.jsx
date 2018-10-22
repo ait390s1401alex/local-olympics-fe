@@ -44,7 +44,7 @@ module.exports = {
 
   signIn() {
     this.getAuth2().signIn().then(function (success) {
-      //window.location.replace(app_settings.baseURL);
+      window.location.reload();
     }, function (fail) {
     });
   },
